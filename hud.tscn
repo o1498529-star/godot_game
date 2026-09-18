@@ -1,0 +1,98 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/ui_panel.svg" id="1_panel"]
+[ext_resource type="Texture2D" path="res://assets/coin.svg" id="2_coin"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="TopPanel" type="TextureRect" parent="."]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 474.0
+offset_bottom = 126.0
+texture = ExtResource("1_panel")
+expand_mode = 1
+
+[node name="ScoreCaption" type="Label" parent="TopPanel"]
+offset_left = 28.0
+offset_top = 15.0
+offset_right = 210.0
+offset_bottom = 48.0
+text = "SCORE"
+theme_override_colors/font_color = Color(0.95, 0.8, 0.36, 1)
+theme_override_font_sizes/font_size = 18
+
+[node name="ScoreValue" type="Label" parent="TopPanel"]
+offset_left = 28.0
+offset_top = 45.0
+offset_right = 210.0
+offset_bottom = 87.0
+text = "0"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+
+[node name="CoinIcon" type="TextureRect" parent="TopPanel"]
+offset_left = 255.0
+offset_top = 19.0
+offset_right = 303.0
+offset_bottom = 67.0
+texture = ExtResource("2_coin")
+expand_mode = 1
+
+[node name="CoinCaption" type="Label" parent="TopPanel"]
+offset_left = 315.0
+offset_top = 15.0
+offset_right = 420.0
+offset_bottom = 48.0
+text = "COINS"
+theme_override_colors/font_color = Color(0.95, 0.8, 0.36, 1)
+theme_override_font_sizes/font_size = 18
+
+[node name="CoinValue" type="Label" parent="TopPanel"]
+offset_left = 315.0
+offset_top = 45.0
+offset_right = 420.0
+offset_bottom = 87.0
+text = "0"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+
+[node name="Hint" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 650.0
+offset_right = 650.0
+offset_bottom = 695.0
+text = "A / D: لاین     W یا Space: پرش     S: آهسته     R: شروع دوباره"
+theme_override_colors/font_color = Color(1, 1, 1, 0.95)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 18
+
+[node name="GameOverPanel" type="TextureRect" parent="."]
+offset_left = 390.0
+offset_top = 238.0
+offset_right = 890.0
+offset_bottom = 482.0
+texture = ExtResource("1_panel")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="GameOverPanel"]
+offset_left = 65.0
+offset_top = 35.0
+offset_right = 435.0
+offset_bottom = 82.0
+text = "RUN OVER"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.96, 0.77, 0.27, 1)
+theme_override_font_sizes/font_size = 34
+
+[node name="Message" type="Label" parent="GameOverPanel"]
+offset_left = 45.0
+offset_top = 100.0
+offset_right = 455.0
+offset_bottom = 145.0
+text = "برای شروع دوباره کلید R را بزن"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
